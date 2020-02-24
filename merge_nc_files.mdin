@@ -1,0 +1,31 @@
+parm step3_charmm2amber.parm7
+
+trajin step5_1.nc 1 last 100
+trajin step5_2.nc 1 last 100
+trajin step5_3.nc 1 last 100
+trajin step5_4.nc 1 last 100
+trajin step5_5.nc 1 last 100
+trajin step5_6.nc 1 last 100
+trajin step5_7.nc 1 last 100
+trajin step5_8.nc 1 last 100
+trajin step5_9.nc 1 last 100
+trajin step5_10.nc 1 last 100
+trajin step5_11.nc 1 last 100
+trajin step5_12.nc 1 last 100
+trajin step5_13.nc 1 last 100
+trajin step5_14.nc 1 last 100
+trajin step5_15.nc 1 last 100
+trajin step5_16.nc 1 last 100
+trajin step5_17.nc 1 last 100
+trajin step5_18.nc 1 last 100
+trajin step5_19.nc 1 last 100
+trajin step5_20.nc 1 last 100
+
+center :1-349 mass origin
+image origin center
+rms first out rms @CA,C,N
+strip :WAT outprefix trunc
+trajout merged_1_200.nc netcdf
+
+
+go
